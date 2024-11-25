@@ -2,7 +2,6 @@
 - anthropic
 - azure_openai
 - google
-- google_sibilare
 - vertex_ai
 - nvidia
 - nvidia_nim
