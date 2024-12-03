@@ -1,6 +1,6 @@
-provider: google Sibilare
+provider: google_sibilare
 label:
-  en_US: Google
+  en_US: Google Sibilare
 description:
   en_US: Google's Gemini model for Sibilare.
   zh_Hans: 谷歌提供的 Gemini 模型.
@@ -21,7 +21,7 @@ configurate_methods:
   - predefined-model
 provider_credential_schema:
   credential_form_schemas:
-    - variable: google_api_key
+    - variable: google_sibilare_api_key
       label:
         en_US: API Key
       type: secret-input
