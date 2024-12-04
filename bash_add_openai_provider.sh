@@ -34,7 +34,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     # macOS version
     sed -i '' "s/^provider: openai/provider: ${CLIENT_NAME_FORMATTED}_openai/" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_openai.yaml"
     sed -i '' "s/en_US: OpenAI/en_US: ${CLIENT_NAME_FORMATTED} OpenAI/" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_openai.yaml"
-    sed -i '' "s/Google's Gemini model./${CLIENT_NAME_FORMATTED} Google's Gemini model./" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_openai.yaml"
+    sed -i '' "s/Models provided by OpenAI./${CLIENT_NAME_FORMATTED} Models provided by OpenAI./" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_openai.yaml"
     sed -i '' "s/openai_api_key/${CLIENT_NAME_FORMATTED}_openai_api_key/" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_openai.yaml"    
     sed -i '' "s/openai_api_base/${CLIENT_NAME_FORMATTED}_openai_api_base/" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_openai.yaml"    
     sed -i '' "s/openai_organization/${CLIENT_NAME_FORMATTED}_openai_organization/" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_openai.yaml"    
