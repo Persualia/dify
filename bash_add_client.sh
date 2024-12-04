@@ -11,8 +11,8 @@ for CLIENT_NAME in "${CLIENT_NAMES[@]}"; do
     PROVIDERS+=("$PROVIDER")
     PROVIDER=$(./bash_add_openai_provider.sh "$CLIENT_NAME")
     PROVIDERS+=("$PROVIDER")
-    #PROVIDER=$(./bash_add_google_provider.sh "$CLIENT_NAME")
-    #PROVIDERS+=("$PROVIDER")
+    PROVIDER=$(./bash_add_google_provider.sh "$CLIENT_NAME")
+    PROVIDERS+=("$PROVIDER")
     
     # Agregar lógica adicional para el cliente si es necesario
     echo "Cliente '$CLIENT_NAME' agregado correctamente."
