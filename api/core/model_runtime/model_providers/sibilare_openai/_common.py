@@ -28,7 +28,7 @@ class _CommonOpenAI:
         }
 
         if credentials.get("sibilare_openai_api_base"):
-            sibilare_openai_api_base = credentials["openai_api_base"].rstrip("/")
+            sibilare_openai_api_base = credentials["sibilare_openai_api_base"].rstrip("/")
             credentials_kwargs["base_url"] = sibilare_openai_api_base + "/v1"
 
         if "sibilare_openai_organization" in credentials:
