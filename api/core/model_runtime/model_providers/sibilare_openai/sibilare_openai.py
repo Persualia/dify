@@ -23,7 +23,11 @@ class OpenAIProvider(ModelProvider):
             # no matter what model you pass in, text completion model or chat model
             model_instance.validate_credentials(model="gpt-4o-mini", credentials=credentials)
         except CredentialsValidateFailedError as ex:
+            print ("type of error", type(ex))
+            print ("message of error", ex)
             raise ex
         except Exception as ex:
+            print ("2 type of error", type(ex))
+            print ("2 message of error", ex)
             logger.exception(f"{self.get_provider_schema().provider} credentials validate failed")
             raise ex
