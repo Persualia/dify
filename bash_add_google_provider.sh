@@ -34,15 +34,15 @@ mv "$DESTINATION_FOLDER/google.yaml" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTE
 if [[ "$OSTYPE" == "darwin"* ]]; then
     # macOS version
     sed -i '' "s/^provider: google/provider: ${CLIENT_NAME_FORMATTED}_google/" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_google.yaml"
-    sed -i '' "s/en_US: Google/en_US: ${CLIENT_NAME_FORMATTED} Google/" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_anthropic.yaml"
-    sed -i '' "s/Google's Gemini model./${CLIENT_NAME_FORMATTED} Google's Gemini model./" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_google.yaml"
+    sed -i '' "s/en_US: Google/en_US: ${CLIENT_NAME_FORMATTED} Google/" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_google.yaml"
+    #sed -i '' "s/Google's Gemini model./${CLIENT_NAME_FORMATTED} Google's Gemini model./" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_google.yaml"
     sed -i '' "s/google_api_key/${CLIENT_NAME_FORMATTED}_google_api_key/" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_google.yaml"    
     sed -i '' "s/google_api_key/${CLIENT_NAME_FORMATTED}_google_api_key/" "$DESTINATION_FOLDER/llm/llm.py" 
 else
     # Linux version
     sed -i "s/^provider: google/provider: ${CLIENT_NAME_FORMATTED}_google/" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_google.yaml"
-    sed -i "s/en_US: Google/en_US: ${CLIENT_NAME_FORMATTED} Google/" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_anthropic.yaml"
-    sed -i "s/Google's Gemini model./${CLIENT_NAME_FORMATTED} Google's Gemini model./" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_google.yaml"
+    sed -i "s/en_US: Google/en_US: ${CLIENT_NAME_FORMATTED} Google/" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_google.yaml"
+    #sed -i "s/Google's Gemini model./${CLIENT_NAME_FORMATTED} Google's Gemini model./" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_google.yaml"
     sed -i "s/google_api_key/${CLIENT_NAME_FORMATTED}_google_api_key/" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_google.yaml"
     sed -i "s/google_api_key/${CLIENT_NAME_FORMATTED}_google_api_key/" "$DESTINATION_FOLDER/llm/llm.py" 
 fi

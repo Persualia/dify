@@ -35,25 +35,25 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     sed -i '' "s/^provider: openai/provider: ${CLIENT_NAME_FORMATTED}_openai/" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_openai.yaml"
     sed -i '' "s/en_US: OpenAI/en_US: ${CLIENT_NAME_FORMATTED} OpenAI/" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_openai.yaml"
     sed -i '' "s/Models provided by OpenAI./${CLIENT_NAME_FORMATTED} Models provided by OpenAI./" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_openai.yaml"
-    sed -i '' "s/openai_api_key/${CLIENT_NAME_FORMATTED}_openai_api_key/" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_openai.yaml"    
-    sed -i '' "s/openai_api_base/${CLIENT_NAME_FORMATTED}_openai_api_base/" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_openai.yaml"    
-    sed -i '' "s/openai_organization/${CLIENT_NAME_FORMATTED}_openai_organization/" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_openai.yaml"    
+    sed -i '' "s/openai_api_key/${CLIENT_NAME_FORMATTED}_openai_api_key/g" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_openai.yaml"    
+    sed -i '' "s/openai_api_base/${CLIENT_NAME_FORMATTED}_openai_api_base/g" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_openai.yaml"    
+    sed -i '' "s/openai_organization/${CLIENT_NAME_FORMATTED}_openai_organization/g" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_openai.yaml"    
     
     sed -i '' "s/openai_api_key/${CLIENT_NAME_FORMATTED}_openai_api_key/" "$DESTINATION_FOLDER/_common.py" 
-    sed -i '' "s/openai_api_base/${CLIENT_NAME_FORMATTED}_openai_api_base/" "$DESTINATION_FOLDER/_common.py" 
+    sed -i '' "s/openai_api_base/${CLIENT_NAME_FORMATTED}_openai_api_base/g" "$DESTINATION_FOLDER/_common.py" 
     sed -i '' "s/openai_organization/${CLIENT_NAME_FORMATTED}_openai_organization/" "$DESTINATION_FOLDER/_common.py" 
 else
     # Linux version
     sed -i "s/^provider: openai/provider: ${CLIENT_NAME_FORMATTED}_openai/" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_openai.yaml"
     sed -i "s/en_US: OpenAI/en_US: ${CLIENT_NAME_FORMATTED} OpenAI/" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_openai.yaml"
     sed -i "s/Models provided by OpenAI./${CLIENT_NAME_FORMATTED} Models provided by OpenAI./" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_opemai.yaml"
-    sed -i "s/openai_api_key/${CLIENT_NAME_FORMATTED}_openai_api_key/" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_openai.yaml"
-    sed -i "s/openai_api_base/${CLIENT_NAME_FORMATTED}_openai_api_base/" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_openai.yaml"
-    sed -i "s/openai_organization/${CLIENT_NAME_FORMATTED}_openai_organization/" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_openai.yaml"
+    sed -i "s/openai_api_key/${CLIENT_NAME_FORMATTED}_openai_api_key/g" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_openai.yaml"
+    sed -i "s/openai_api_base/${CLIENT_NAME_FORMATTED}_openai_api_base/g" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_openai.yaml"
+    sed -i "s/openai_organization/${CLIENT_NAME_FORMATTED}_openai_organization/g" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_openai.yaml"
     
-    sed -i "s/openai_api_key/${CLIENT_NAME_FORMATTED}_openai_api_key/" "$DESTINATION_FOLDER/_common.py" 
-    sed -i "s/openai_api_base/${CLIENT_NAME_FORMATTED}_openai_api_basey/" "$DESTINATION_FOLDER/_common.py" 
-    sed -i "s/openai_organization/${CLIENT_NAME_FORMATTED}_openai_organization/" "$DESTINATION_FOLDER/_common.py" 
+    sed -i "s/openai_api_key/${CLIENT_NAME_FORMATTED}_openai_api_key/g" "$DESTINATION_FOLDER/_common.py" 
+    sed -i "s/openai_api_base/${CLIENT_NAME_FORMATTED}_openai_api_basey/g" "$DESTINATION_FOLDER/_common.py" 
+    sed -i "s/openai_organization/${CLIENT_NAME_FORMATTED}_openai_organization/g" "$DESTINATION_FOLDER/_common.py" 
 fi
 
 # Confirmar que la copia fue exitosa
