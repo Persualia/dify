@@ -11,7 +11,7 @@ from core.model_runtime.entities.model_entities import PriceType
 from core.model_runtime.entities.text_embedding_entities import EmbeddingUsage, TextEmbeddingResult
 from core.model_runtime.errors.validate import CredentialsValidateFailedError
 from core.model_runtime.model_providers.__base.text_embedding_model import TextEmbeddingModel
-from core.model_runtime.model_providers.openai._common import _CommonOpenAI
+from core.model_runtime.model_providers.sibilare_openai._common import _CommonOpenAI
 
 
 class OpenAITextEmbeddingModel(_CommonOpenAI, TextEmbeddingModel):

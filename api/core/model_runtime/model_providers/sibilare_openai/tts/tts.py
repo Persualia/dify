@@ -6,7 +6,7 @@ from openai import OpenAI
 from core.model_runtime.errors.invoke import InvokeBadRequestError
 from core.model_runtime.errors.validate import CredentialsValidateFailedError
 from core.model_runtime.model_providers.__base.tts_model import TTSModel
-from core.model_runtime.model_providers.openai._common import _CommonOpenAI
+from core.model_runtime.model_providers.sibilare_openai._common import _CommonOpenAI
 
 
 class OpenAIText2SpeechModel(_CommonOpenAI, TTSModel):

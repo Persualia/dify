@@ -27,7 +27,7 @@ from core.model_runtime.entities.llm_entities import LLMMode, LLMResult, LLMResu
 from core.model_runtime.entities.model_entities import AIModelEntity, FetchFrom, I18nObject, ModelType, PriceConfig
 from core.model_runtime.errors.validate import CredentialsValidateFailedError
 from core.model_runtime.model_providers.__base.large_language_model import LargeLanguageModel
-from core.model_runtime.model_providers.openai._common import _CommonOpenAI
+from core.model_runtime.model_providers.sibilare_openai._common import _CommonOpenAI
 
 logger = logging.getLogger(__name__)
 

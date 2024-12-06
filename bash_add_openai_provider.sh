@@ -42,6 +42,12 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     sed -i '' "s/openai_api_key/${CLIENT_NAME_FORMATTED}_openai_api_key/" "$DESTINATION_FOLDER/_common.py" 
     sed -i '' "s/openai_api_base/${CLIENT_NAME_FORMATTED}_openai_api_base/g" "$DESTINATION_FOLDER/_common.py" 
     sed -i '' "s/openai_organization/${CLIENT_NAME_FORMATTED}_openai_organization/" "$DESTINATION_FOLDER/_common.py" 
+
+    sed -i '' "s/.openai._common/.${CLIENT_NAME_FORMATTED}_openai._common/" "$DESTINATION_FOLDER/llm/llm.py"
+    sed -i '' "s/.openai._common/.${CLIENT_NAME_FORMATTED}_openai._common/" "$DESTINATION_FOLDER/moderation/moderation.py"
+    sed -i '' "s/.openai._common/.${CLIENT_NAME_FORMATTED}_openai._common/" "$DESTINATION_FOLDER/speech2text/speech2text.py"
+    sed -i '' "s/.openai._common/.${CLIENT_NAME_FORMATTED}_openai._common/" "$DESTINATION_FOLDER/text_embedding/text_embedding.py"
+    sed -i '' "s/.openai._common/.${CLIENT_NAME_FORMATTED}_openai._common/" "$DESTINATION_FOLDER/tts/tts.py"
 else
     # Linux version
     sed -i "s/^provider: openai/provider: ${CLIENT_NAME_FORMATTED}_openai/" "$DESTINATION_FOLDER/${CLIENT_NAME_FORMATTED}_openai.yaml"
@@ -54,6 +60,12 @@ else
     sed -i "s/openai_api_key/${CLIENT_NAME_FORMATTED}_openai_api_key/g" "$DESTINATION_FOLDER/_common.py" 
     sed -i "s/openai_api_base/${CLIENT_NAME_FORMATTED}_openai_api_basey/g" "$DESTINATION_FOLDER/_common.py" 
     sed -i "s/openai_organization/${CLIENT_NAME_FORMATTED}_openai_organization/g" "$DESTINATION_FOLDER/_common.py" 
+
+    sed -i "s/.openai._common/.${CLIENT_NAME_FORMATTED}_openai._common/" "$DESTINATION_FOLDER/llm/llm.py"
+    sed -i "s/.openai._common/.${CLIENT_NAME_FORMATTED}_openai._common/" "$DESTINATION_FOLDER/moderation/moderation.py"
+    sed -i "s/.openai._common/.${CLIENT_NAME_FORMATTED}_openai._common/" "$DESTINATION_FOLDER/speech2text/speech2text.py"
+    sed -i "s/.openai._common/.${CLIENT_NAME_FORMATTED}_openai._common/" "$DESTINATION_FOLDER/text_embedding/text_embedding.py"
+    sed -i "s/.openai._common/.${CLIENT_NAME_FORMATTED}_openai._common/" "$DESTINATION_FOLDER/tts/tts.py"
 fi
 
 # Confirmar que la copia fue exitosa

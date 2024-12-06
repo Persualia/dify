@@ -6,7 +6,7 @@ from core.model_runtime.entities.common_entities import I18nObject
 from core.model_runtime.entities.model_entities import AIModelEntity, FetchFrom, ModelType
 from core.model_runtime.errors.validate import CredentialsValidateFailedError
 from core.model_runtime.model_providers.__base.speech2text_model import Speech2TextModel
-from core.model_runtime.model_providers.openai._common import _CommonOpenAI
+from core.model_runtime.model_providers.sibilare_openai._common import _CommonOpenAI
 
 
 class OpenAISpeech2TextModel(_CommonOpenAI, Speech2TextModel):
